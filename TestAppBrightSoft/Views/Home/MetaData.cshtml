@@ -1,0 +1,36 @@
+﻿@model TestAppBrightSoft.Models.Home.MetadetaModel
+@{
+    ViewData["Title"] = "Мета-данные справочников";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Мета-дата справочников</h1>
+            <a class="btn btn-success" href="@Url.RouteUrl("Default", new {controller = "Home", action = "Index" })">Назад к данным</a>
+            @foreach (var tab in Model.tableMetadatas)
+            {
+                <h3>@tab.TableName</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Атрибут</th>
+                            <th>Тип данных</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var col in tab.ColumnDatas)
+                        {
+                            <tr>
+                                <td>@col.Name</td>
+                                <td>@col.DataType</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+        </div>
+        </div>
+</div>
+

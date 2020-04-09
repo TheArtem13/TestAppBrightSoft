@@ -17,12 +17,7 @@ namespace DataLayer
         {
             Database.EnsureCreated();   // создаем базу данных при первом обращении
         }
-        //public EfDbContext(DbContextOptions<EfDbContext> options) : base(options) { }
         public IConfiguration Configuration { get; }
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    string connection = Configuration.GetConnectionString("DefaultConnection");
-        //    optionsBuilder.UseSqlServer(connection);
-        //}
+        
     }
 }

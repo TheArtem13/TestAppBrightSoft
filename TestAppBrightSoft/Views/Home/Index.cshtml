@@ -1,0 +1,66 @@
+﻿@model TestAppBrightSoft.Models.Home.HomeModel
+@{
+    ViewData["Title"] = "Справочники";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+    <div class="container">
+        <h1>Справочники</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <a class="btn btn-success" href="@Url.RouteUrl("Default", new {controller = "Home", action = "MetaData" })">Посмотреть мета-данные справочников</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Объекты строительства</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Идентификатор</th>
+                            <th>Наименование</th>
+                            <th>Код объекта</th>
+                            <th>Бюджет, млн. руб.</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.directoryObjects)
+                        {
+                            <tr>
+                                <td>@item.Id</td>
+                                <td>@item.Name</td>
+                                <td>@item.Code</td>
+                                <td>@item.Budjet</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Версии объектов</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Идентификатор</th>
+                            <th>Наименование</th>
+                            <th>Тип версии</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Versions)
+                        {
+                            <tr>
+                                <td>@item.Id</td>
+                                <td>@item.Name</td>
+                                <td>@item.VersionType</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+
