@@ -13,12 +13,15 @@ namespace TestAppBrightSoft.Controllers
     public class HomeController : Controller
     {
         private EfDbContext _context;
-        public HomeController(EfDbContext context)
+        private DataManager _dataManager;
+        public HomeController(EfDbContext context, DataManager dataManager)
         {
             _context = context;
+            _dataManager = dataManager;
         }
         public IActionResult Index()
         {
+            //int r = _dataManager.GetObjectVersionValue(1,1); //Пример вызова функции задания п.6
             var existRecords = _context.directoryObjectVersions.FirstOrDefault();
             if(existRecords == null)
             {

@@ -29,7 +29,7 @@ namespace TestAppBrightSoft
             services.AddDbContext<EfDbContext>(options =>
             options.UseSqlServer(connection));
 
-            //services.AddScoped<DataManager>();
+            services.AddScoped<DataManager>();
             services.AddControllersWithViews();
         }
 
