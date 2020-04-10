@@ -9,7 +9,8 @@
         <div class="col-md-12">
             <h1>Мета-дата справочников</h1>
             <a class="btn btn-success" href="@Url.RouteUrl("Default", new {controller = "Home", action = "Index" })">Назад к данным</a>
-            <a class="btn btn-warning toReport" href="#">Сформировать отчёт</a>
+            <a class="btn btn-warning toReport disabled" href="#">Сформировать отчёт</a>
+            <p>(Хотел сделать формирование отчёта отсюда, но не учёл, что сервис для отчётов нужно создать отдельным приложением. Так что там json задаётся прямо в контроллере)</p>
             @foreach (var tab in Model.tableMetadatas.Where(x => x.TableName != "directoryObjectVersions"))
             {
                 <h3>@tab.TableName</h3>
