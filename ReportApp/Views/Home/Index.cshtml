@@ -1,0 +1,8 @@
+﻿@model ReportApp.Models.ShowModel
+@{
+    ViewData["Title"] = "Отчёт для примера";
+}
+
+<table class="table">
+    @Html.Raw(Model.HTMLTable)
+</table>

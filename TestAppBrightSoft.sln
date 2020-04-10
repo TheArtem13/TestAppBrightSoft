@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAppBrightSoft", "TestAppBrightSoft\TestAppBrightSoft.csproj", "{D0503EE4-049D-4E4B-8014-5939D514257B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestAppBrightSoft", "TestAppBrightSoft\TestAppBrightSoft.csproj", "{D0503EE4-049D-4E4B-8014-5939D514257B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{081FDC13-77AA-4C96-8088-485FDD1BB9BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLayer", "DataLayer\DataLayer.csproj", "{081FDC13-77AA-4C96-8088-485FDD1BB9BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportApp", "ReportApp\ReportApp.csproj", "{051A7622-D978-4A1F-9ECF-FF73C396002B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{081FDC13-77AA-4C96-8088-485FDD1BB9BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{081FDC13-77AA-4C96-8088-485FDD1BB9BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{081FDC13-77AA-4C96-8088-485FDD1BB9BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{051A7622-D978-4A1F-9ECF-FF73C396002B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{051A7622-D978-4A1F-9ECF-FF73C396002B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{051A7622-D978-4A1F-9ECF-FF73C396002B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{051A7622-D978-4A1F-9ECF-FF73C396002B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

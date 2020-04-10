@@ -1,0 +1,12 @@
+{
+  "Strings": {
+    "Table": "directoryObjects",
+    "Data": "Code, Name"
+  },
+  "Columns": {
+    "Table": "Versions",
+    "Data": "Name"
+  }
+}
+
+//"{\"Strings\":{\"Table\":\"directoryObjects\",\"Data\":\"Code, Name\"},\"Columns\":{\"Table\":\"Versions\",\"Data\":\"Name\"}}"

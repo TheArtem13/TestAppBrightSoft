@@ -9,28 +9,40 @@
         <div class="col-md-12">
             <h1>Мета-дата справочников</h1>
             <a class="btn btn-success" href="@Url.RouteUrl("Default", new {controller = "Home", action = "Index" })">Назад к данным</a>
-            @foreach (var tab in Model.tableMetadatas)
+            <a class="btn btn-warning toReport" href="#">Сформировать отчёт</a>
+            @foreach (var tab in Model.tableMetadatas.Where(x => x.TableName != "directoryObjectVersions"))
             {
                 <h3>@tab.TableName</h3>
+                <select class="tabledirection form-control" data-Selecttable="@tab.TableName">
+                    <option value="strings">Это строки</option>
+                    <option value="columns" selected="@(tab.TableName == "ObjectVersions")">Это столбцы </option>
+                </select>
                 <table class="table">
                     <thead>
                         <tr>
                             <th>Атрибут</th>
                             <th>Тип данных</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach (var col in tab.ColumnDatas)
                         {
                             <tr>
-                                <td>@col.Name</td>
-                                <td>@col.DataType</td>
-                            </tr>
-                        }
+                                <td data-table="@tab.TableName">@col.Name</td>
+                                <td data-table="@tab.TableName">@col.DataType</td>
+                                <td>
+                                    @if (col.Name != "Id")
+                                    {
+                                        <input class="chk" data-table="@tab.TableName" data-name="@col.Name" type="checkbox" checked title="Вывести в отчёт" />
+                                    }
+                            </td>
+                        </tr>
+                    }
                     </tbody>
                 </table>
             }
         </div>
-        </div>
+    </div>
 </div>
 
